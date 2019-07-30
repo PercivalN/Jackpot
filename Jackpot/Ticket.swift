@@ -9,15 +9,25 @@
 import Foundation
 
 struct Ticket {
-    var picks: [Int] = []
+    var picks = Set<Int>()
+    
+    var description: String {
+        var numbers = ""
+        for aPick in picks.sorted() {
+            numbers = numbers + " " + String(format: "%02i", aPick)
+        }
+        return numbers
+    }
     
     init() {
         createPicks()
     }
     
     private mutating func createPicks() {
-        let pick = Int.random(in: 1...53)
-        picks.append(pick)
+        while picks.count < 6 {
+            let pick = Int.random(in: 1...53)
+            picks.insert(pick)
+        }
         
         print(picks)
     }

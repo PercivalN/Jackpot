@@ -45,7 +45,8 @@ class TicketsTableViewController: UITableViewController {
 
         // Configure the cell...
         let ticket = tickets[indexPath.row]
-        cell.textLabel?.text = "Ticket #\(ticket.picks)"
+        cell.textLabel?.text = ticket.description
+        cell.textLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: 17, weight: .regular)
 
         return cell
     }
