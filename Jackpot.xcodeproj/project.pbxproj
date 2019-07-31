@@ -58,11 +58,11 @@
 		CE23AC2F22EF7D1A0067241A /* Jackpot */ = {
 			isa = PBXGroup;
 			children = (
+				CE23AC3422EF7D1A0067241A /* Main.storyboard */,
 				CE23AC3022EF7D1A0067241A /* AppDelegate.swift */,
 				CE23AC4222EF7DB50067241A /* TicketsTableViewController.swift */,
 				CE23AC4622F0DD4D0067241A /* TicketController.swift */,
 				CE23AC4422EF86320067241A /* Ticket.swift */,
-				CE23AC3422EF7D1A0067241A /* Main.storyboard */,
 				CE23AC3722EF7D1B0067241A /* Assets.xcassets */,
 				CE23AC3922EF7D1B0067241A /* LaunchScreen.storyboard */,
 				CE23AC3C22EF7D1B0067241A /* Info.plist */,
@@ -292,6 +292,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Jackpot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Jackpot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
