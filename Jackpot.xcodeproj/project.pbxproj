@@ -14,6 +14,7 @@
 		CE23AC4322EF7DB50067241A /* TicketsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23AC4222EF7DB50067241A /* TicketsTableViewController.swift */; };
 		CE23AC4522EF86320067241A /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23AC4422EF86320067241A /* Ticket.swift */; };
 		CE23AC4722F0DD4D0067241A /* TicketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23AC4622F0DD4D0067241A /* TicketController.swift */; };
+		CE23AC6A22F1F6D40067241A /* WinningTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23AC6922F1F6D40067241A /* WinningTicketViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CE23AC4222EF7DB50067241A /* TicketsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsTableViewController.swift; sourceTree = "<group>"; };
 		CE23AC4422EF86320067241A /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		CE23AC4622F0DD4D0067241A /* TicketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketController.swift; sourceTree = "<group>"; };
+		CE23AC6922F1F6D40067241A /* WinningTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningTicketViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				CE23AC3022EF7D1A0067241A /* AppDelegate.swift */,
 				CE23AC4222EF7DB50067241A /* TicketsTableViewController.swift */,
 				CE23AC4622F0DD4D0067241A /* TicketController.swift */,
+				CE23AC6922F1F6D40067241A /* WinningTicketViewController.swift */,
 				CE23AC4422EF86320067241A /* Ticket.swift */,
 				CE23AC3422EF7D1A0067241A /* Main.storyboard */,
 				CE23AC3722EF7D1B0067241A /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				CE23AC4722F0DD4D0067241A /* TicketController.swift in Sources */,
 				CE23AC4522EF86320067241A /* Ticket.swift in Sources */,
 				CE23AC3122EF7D1A0067241A /* AppDelegate.swift in Sources */,
+				CE23AC6A22F1F6D40067241A /* WinningTicketViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

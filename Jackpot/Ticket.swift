@@ -23,6 +23,10 @@ struct Ticket {
         createPicks()
     }
     
+    init(picks: Set<Int>) {
+        self.picks = picks
+    }
+    
     private mutating func createPicks() {
         while picks.count < 6 {
             let pick = Int.random(in: 1...53)

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,6 +43,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="1ID-Aj-MRs">
+                        <barButtonItem key="leftBarButtonItem" title="Enter Winning Ticket" id="one-TB-edg">
+                            <connections>
+                                <segue destination="Y9t-2u-4El" kind="presentation" identifier="ModalWinningTicketSegue" id="Y2N-Ua-LYI"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="AYd-gG-nAa">
                             <connections>
                                 <action selector="createTicket:" destination="hqo-86-CCZ" id="aBC-yJ-wOz"/>
@@ -52,6 +58,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ovh-vI-ieW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="957.97101449275374" y="92.410714285714278"/>
+        </scene>
+        <!--Winning Ticket View Controller-->
+        <scene sceneID="IcS-41-iD3">
+            <objects>
+                <viewController id="w21-Pb-2un" customClass="WinningTicketViewController" customModule="Jackpot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x3t-cF-Skh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fjj-Gg-koo">
+                                <rect key="frame" x="0.0" y="340" width="414" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fjj-Gg-koo" firstAttribute="centerY" secondItem="x3t-cF-Skh" secondAttribute="centerY" id="BwW-NJ-uiV"/>
+                            <constraint firstItem="Fjj-Gg-koo" firstAttribute="leading" secondItem="syj-wC-ouR" secondAttribute="leading" id="UEw-3a-A3X"/>
+                            <constraint firstItem="syj-wC-ouR" firstAttribute="trailing" secondItem="Fjj-Gg-koo" secondAttribute="trailing" id="eTX-2Q-EAW"/>
+                            <constraint firstItem="Fjj-Gg-koo" firstAttribute="centerX" secondItem="x3t-cF-Skh" secondAttribute="centerX" id="hNn-oi-joO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="syj-wC-ouR"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="cancel" id="yEv-9y-QMC">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="w21-Pb-2un" id="Ax9-RF-lGd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Jex-8M-GYw"/>
+                        <barButtonItem systemItem="done" id="b4C-IV-kFf">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="w21-Pb-2un" id="tMy-F2-qvx"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="rjU-xM-Q9I"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="winningTicketPickerView" destination="Fjj-Gg-koo" id="0Mf-4x-qoO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fn7-AT-2ca" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2710.144927536232" y="-577.23214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uqp-Nw-sKG">
@@ -70,6 +120,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpg-oT-mpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="92.410714285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HUn-25-pKG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="Y9t-2u-4El" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3FU-L1-6PZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BqB-u8-ifI">
+                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="w21-Pb-2un" kind="relationship" relationship="rootViewController" id="Vvi-aQ-bHT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aKk-hn-tmv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800.0000000000002" y="-577.23214285714278"/>
         </scene>
     </scenes>
 </document>

@@ -11,6 +11,7 @@ import Foundation
 class TicketController {
     
     var tickets: [Ticket] = []
+    var winningTicket: Ticket?
     
     func addRandomTicket() {
         let newTicket = Ticket()
