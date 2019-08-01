@@ -18,8 +18,7 @@ class TicketsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        print(ticketController.winningTicket?.description)
+        tableView.reloadData()
     }
     
     // MARK: - Actions
@@ -46,7 +45,13 @@ class TicketsTableViewController: UITableViewController {
         let ticket = ticketController.tickets[indexPath.row]
         cell.textLabel?.text = ticket.description
         cell.textLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: 17, weight: .regular)
-
+        if ticket.payout != .none {
+            cell.backgroundColor = .green
+            cell.detailTextLabel?.text = ticket.payout.rawValue
+        } else {
+            cell.backgroundColor = .white
+            cell.detailTextLabel?.text = ""
+        }
         return cell
     }
 

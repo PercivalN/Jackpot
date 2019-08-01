@@ -29,6 +29,7 @@ class WinningTicketViewController: UIViewController {
     
     @IBAction func doneButtonTapped(_ sender: UIBarButtonItem) {
         ticketController?.winningTicket = createWinningTicket()
+        ticketController?.decideWinners()
         dismiss(animated: true, completion: nil)
     }
     
