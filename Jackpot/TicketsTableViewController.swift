@@ -16,6 +16,11 @@ class TicketsTableViewController: UITableViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     // MARK: - Actions
     
     @IBAction func createTicket(_ sender: UIBarButtonItem) {
@@ -40,18 +45,26 @@ class TicketsTableViewController: UITableViewController {
         let ticket = ticketController.tickets[indexPath.row]
         cell.textLabel?.text = ticket.description
         cell.textLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: 17, weight: .regular)
-
+        if ticket.payout != .none {
+            cell.backgroundColor = .green
+            cell.detailTextLabel?.text = ticket.payout.rawValue
+        } else {
+            cell.backgroundColor = .white
+            cell.detailTextLabel?.text = ""
+        }
         return cell
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ModalWinningTicketSegue" {
+            if let navC = segue.destination as? UINavigationController,
+                let destVC = navC.viewControllers[0] as? WinningTicketViewController {
+                destVC.ticketController = ticketController
+            }
+        }
     }
-    */
 
 }
